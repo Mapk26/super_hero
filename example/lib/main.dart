@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:super_hero_v2/super_hero.dart';
+import 'package:super_hero_v2/super_hero_v2.dart';
 
 void main() => runApp(const SuperHeroV2());
 
