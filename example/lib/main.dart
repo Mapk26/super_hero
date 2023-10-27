@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:super_hero/super_hero.dart';
+import 'package:super_hero_v2/super_hero.dart';
 
-void main() => runApp(SuperHeroIllustrator());
+void main() => runApp(const SuperHeroV2());
 
-class SuperHeroIllustrator extends StatefulWidget {
+class SuperHeroV2 extends StatefulWidget {
+  const SuperHeroV2({super.key});
+
   @override
-  State<StatefulWidget> createState() => _SuperHeroIllustratorState();
+  State<SuperHeroV2> createState() => _SuperHeroV2State();
 }
 
-class _SuperHeroIllustratorState extends State<SuperHeroIllustrator> {
+class _SuperHeroV2State extends State<SuperHeroV2> {
   String _superHeroName = SuperHero.random();
 
   @override
@@ -18,19 +20,19 @@ class _SuperHeroIllustratorState extends State<SuperHeroIllustrator> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Super Hero Illustrator'),
+          title: const Text('Super Hero V2'),
         ),
         body: Center(
           child: Text(
             _superHeroName,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.skip_next),
+          child: const Icon(Icons.casino),
           onPressed: () {
             setState(() {
               _superHeroName = SuperHero.random();

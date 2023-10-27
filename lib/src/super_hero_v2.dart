@@ -4,13 +4,11 @@ import 'dart:math';
 
 import 'super_heroes.dart';
 
-class SuperHero {
+abstract class SuperHero {
   /// Get a random super-hero name.
   static String random() {
     int numberOfSuperheroes = superheroes.length;
     int randomNumber = Random().nextInt(numberOfSuperheroes);
-    return superheroes[randomNumber];
+    return superheroes.elementAt(randomNumber);
   }
 }
-
-String random() => SuperHero.random();
